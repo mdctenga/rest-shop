@@ -1,9 +1,10 @@
 var express = require('express');
 var app = express();
 var config = require('./config/config.json');
+var jade = require('jade');
 
 app.get('/', function (req, res) {
-  res.send('Hello World!');
+  res.render('index.jade');
 });
 
 app.post('/order/:id', function (req, res) {
